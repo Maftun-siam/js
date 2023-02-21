@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="comment-container">
+        <h1 id="comment">Please add your comment </h1>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nam pariatur, quod harum voluptate
+            eveniet
+            corrupti
+            earum dolorum doloremque adipisci saepe, cumque nobis vitae. Voluptas nostrum vel similique exercitationem
+            iure,
+            officiis facilis odit natus, qui dolorum ipsum molestias debitis sapiente! Commodi hic facilis possimus
+            reprehenderit voluptas. Illum quam quaerat iure.
+        </p>
+    </div>
+    <div> <textarea name="" id="comment-box" cols="60" rows="10"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+
+
+    <script>
+        let commentCount = 0;
+        /* add event listner to post button */
+        document.getElementById('btn-post').addEventListener('click', function () {
+            /* get comment inside the text area */
+            const theComment = document.getElementById('comment-box');
+            const newComment = theComment.value;
+            commentCount++;
+
+            /* step : 3  set thje comment inside the comment container */
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+            /* step 4 : clear */
+            theComment.value = '';
+            console.log('Comment ', commentCount, ':', newComment);
+        })
+    </script>
+
+
+    <!--  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<p>Default input text</p>
+<input type="text">
+<button>update</button>
+
+
+
+
+
+
+
+
+
+
+    <h1>Final dom event handler</h1>
+    <h3 id="default-text">This text will changed</h3>
+    <button onclick="handleOnClicked()">Handle event by add onclick function</button>
+    <script>
+        function handleOnClicked (){
+            document.getElementById('default-text').innerText = 'this text has changed';
+
+        }
+    </script>
+</body>
+</html>
